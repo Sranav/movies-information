@@ -7,9 +7,9 @@ $(document).ready(() => {
   });
   
   function getMovies(searchText){
-    axios.get('http://www.omdbapi.com/?s=game&apikey=a0835fe1&page=1   s ='+searchText)
+    axios.get('http://www.omdbapi.com/?apikey=a0835fe1&page=1&s='+searchText)
       .then((response) => {
-        console.log(response);
+       
         let movies = response.data.Search;
         let output = '';
         $.each(movies, (index, movie) => {
@@ -43,9 +43,9 @@ $(document).ready(() => {
       
 
 
-      axios.get(' http://www.omdbapi.com/?i=tt0338459&apikey=a0835fe1&  i  ='+movieId)
+      axios.get('http://www.omdbapi.com?apikey=a0835fe1&i='+movieId)
       .then((response) => {
-        console.log(response);
+       
         let movie=response.data;
         
         let output=`
